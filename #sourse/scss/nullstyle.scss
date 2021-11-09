@@ -1,0 +1,135 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: $font-size;
+	font-weight: 400;
+	font-family: $font-family;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+// ===============================================================================================================
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container {
+	width: 100%;
+	max-width: $container-width + $container-padding * 2;
+	padding: 0 $container-padding;
+	margin: 0 auto;
+	&_title {
+		font-family: Ubuntu;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 28 / 24 * 100%;
+	}
+}
+
+.button {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	border-radius: 10px;
+	background-color: $orange;
+	height: 48px;
+	font-size: 16px;
+	border: 1px solid $orange;
+	transition: 300ms;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $orange;
+			background-color: white;
+		}
+	}
+	&-white {
+		background-color: white;
+		color: $orange;
+		&:hover {
+			background-color: $orange;
+			color: white;
+		}
+	}
+	&-small {
+		background-color: white;
+		color: $orange;
+		border-radius: 30px;
+		min-height: 40px;
+		@media (any-hover: hover) {
+			&:hover {
+				color: white;
+				background-color: $orange;
+			}
+		}
+	}
+}
